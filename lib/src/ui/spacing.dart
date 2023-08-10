@@ -5,6 +5,8 @@ class Spacings {
 
   Widget get horizontal18 => const SizedBox(width: 18);
 
+  Widget get horizontal6 => const SizedBox(width: 6);
+
   Widget get vertical5 => const SizedBox(height: 5);
 
   Widget get vertical11 => const SizedBox(height: 11);
