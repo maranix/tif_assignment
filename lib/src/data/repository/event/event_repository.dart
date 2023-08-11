@@ -23,7 +23,7 @@ final class EventRepository extends Repository implements EventI {
 
   @override
   Future<GetEventDetailsResponse> getEventDetails({
-    required String id,
+    required int id,
   }) async {
     final uri = baseUri.copyWith(
       path: '/v1/event/$id',

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tif_assignment/src/ui/spacing.dart';
 import 'package:tif_assignment/src/ui/ui.dart';
 
 const _appFontFamily = 'Inter';

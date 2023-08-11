@@ -12,7 +12,7 @@ interface class EventI {
   }
 
   Future<GetEventDetailsResponse> getEventDetails({
-    required String id,
+    required int id,
   }) {
     throw UnimplementedError('getEventDetails() is not yet implemented');
   }

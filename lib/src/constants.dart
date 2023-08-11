@@ -8,4 +8,6 @@ class Assets {
   static const location = 'assets/icons/location.svg';
   static const mapPin = 'assets/icons/map_pin.svg';
   static const tifFolks = 'assets/icons/tif_folks.svg';
+
+  static const bannerImage = 'assets/images/banner.jpg';
 }
