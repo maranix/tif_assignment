@@ -23,14 +23,7 @@ class GradientCTAButton extends StatelessWidget {
       builder: (context, state) => switch (state) {
         EventLoaded() => DecoratedBox(
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Colors.white.withOpacity(0.0),
-                  Colors.white,
-                ],
-              ),
+              gradient: AppTheme.of(context).appLinearGradient,
             ),
             child: Padding(
               padding: AppTheme.of(context).appPaddings.floatingButtonPadding,

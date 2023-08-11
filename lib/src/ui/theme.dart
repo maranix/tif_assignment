@@ -12,16 +12,12 @@ const _appSecondaryTextColor = Color(0xFF747688);
 
 const _appBorderRadius = BorderRadius.all(Radius.circular(10));
 
-const _appPrimaryLinearGradient = LinearGradient(
+final _appPrimaryLinearGradient = LinearGradient(
   begin: Alignment.topCenter,
   end: Alignment.bottomCenter,
   colors: [
+    Colors.white.withOpacity(0.0),
     Colors.white,
-    Colors.white,
-  ],
-  stops: [
-    0,
-    100,
   ],
 );
 
