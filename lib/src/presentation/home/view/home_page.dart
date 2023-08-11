@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tif_assignment/src/constants.dart';
-import 'package:tif_assignment/src/data/model/model.dart';
 import 'package:tif_assignment/src/data/repository/repository.dart';
 import 'package:tif_assignment/src/feature/feature.dart';
-import 'package:tif_assignment/src/presentation/widgets/event_card.dart';
+import 'package:tif_assignment/src/presentation/home/widgets/event_list.dart';
+import 'package:tif_assignment/src/presentation/search/search.dart';
 import 'package:tif_assignment/src/ui/theme.dart';
 
 part 'home_view.dart';

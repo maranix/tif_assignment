@@ -92,4 +92,20 @@ class TextStyles {
           FontVariation('wght', 500),
         ],
       );
+
+  TextStyle get searchCardSchedule => TextStyle(
+        fontSize: 12,
+        color: primaryColor,
+        fontVariations: const [
+          FontVariation('wght', 500),
+        ],
+      );
+
+  TextStyle get searchCardTitle => TextStyle(
+        fontSize: 18,
+        color: color,
+        fontVariations: const [
+          FontVariation('wght', 500),
+        ],
+      );
 }

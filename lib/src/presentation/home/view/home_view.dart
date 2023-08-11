@@ -3,6 +3,15 @@ part of 'home_page.dart';
 class _HomeView extends StatelessWidget {
   const _HomeView();
 
+  void _onSearchIconPressed(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const SearchPage(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +31,7 @@ class _HomeView extends StatelessWidget {
                 ),
                 const Spacer(),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () => _onSearchIconPressed(context),
                   icon: SvgPicture.asset(
                     Assets.searchIcon,
                     fit: BoxFit.cover,
@@ -59,30 +68,6 @@ class _HomeView extends StatelessWidget {
           },
         ),
       ),
-    );
-  }
-}
-
-class EventList extends StatelessWidget {
-  const EventList({
-    super.key,
-    required this.data,
-  });
-
-  final List<Event> data;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.separated(
-      itemCount: data.length,
-      itemBuilder: (context, index) => EventCard(
-        key: Key(
-          'home_event_$index',
-        ),
-        event: data[index],
-      ),
-      separatorBuilder: (context, index) =>
-          AppTheme.of(context).appSpacings.vertical12,
     );
   }
 }
