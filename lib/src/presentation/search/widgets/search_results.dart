@@ -61,6 +61,33 @@ class _SearchResultCard extends StatelessWidget {
     );
   }
 
+  String formatDate(DateTime date) {
+    String day = DateFormat('d').format(date);
+    String month = DateFormat('MMM').format(date);
+    String dayOfWeek = DateFormat('E').format(date);
+    String time = DateFormat('h:mm a').format(date);
+
+    String suffix = _getDaySuffix(int.parse(day));
+
+    return '$day$suffix $month - $dayOfWeek - $time';
+  }
+
+  String _getDaySuffix(int day) {
+    if (day >= 11 && day <= 13) {
+      return 'th';
+    }
+    switch (day % 10) {
+      case 1:
+        return 'st';
+      case 2:
+        return 'nd';
+      case 3:
+        return 'rd';
+      default:
+        return 'th';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return DecoratedBox(
@@ -110,7 +137,7 @@ class _SearchResultCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        DateFormat('E, MMM d • h:mm a').format(event.dateTime),
+                        formatDate(event.dateTime),
                         style:
                             AppTheme.of(context).textStyles.searchCardSchedule,
                       ),
