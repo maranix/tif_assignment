@@ -10,49 +10,53 @@ class _EventView extends StatelessWidget {
         slivers: [
           SliverAppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Colors.transparent,
             systemOverlayStyle: SystemUiOverlayStyle.light,
             expandedHeight: kToolbarHeight * 4,
-            flexibleSpace: Stack(
-              children: [
-                const EventBanner(),
-                SafeArea(
-                  child: Padding(
-                    padding: AppTheme.of(context).appPaddings.defaultPadding,
-                    child: Row(
-                      children: [
-                        InkWell(
-                          onTap: () => Navigator.pop(context),
-                          child: Padding(
-                            padding: AppTheme.of(context).appPaddings.right13,
-                            child: SvgPicture.asset(
-                              Assets.arrowLeft,
-                            ),
-                          ),
+            floating: true,
+            snap: true,
+            flexibleSpace: FlexibleSpaceBar(
+              expandedTitleScale: 1.0,
+              centerTitle: true,
+              title: Padding(
+                padding:
+                    AppTheme.of(context).appPaddings.defaultPadding.copyWith(
+                          top: 0,
+                          bottom: 0,
                         ),
-                        Text(
-                          'Event Details',
-                          style: AppTheme.of(context)
-                              .textStyles
-                              .appBarTitle
-                              .copyWith(color: Colors.white),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    InkWell(
+                      onTap: () => Navigator.pop(context),
+                      child: Padding(
+                        padding: AppTheme.of(context).appPaddings.right13,
+                        child: SvgPicture.asset(
+                          Assets.arrowLeft,
                         ),
-                        const Spacer(),
-                        DecoratedIcon(
-                          backgroundColor: Colors.white54,
-                          child: SvgPicture.asset(
-                            Assets.bookmark,
-                            colorFilter: const ColorFilter.mode(
-                              Colors.white,
-                              BlendMode.srcIn,
-                            ),
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                )
-              ],
+                    Text(
+                      'Event Details',
+                      style: AppTheme.of(context)
+                          .textStyles
+                          .appBarTitle
+                          .copyWith(color: Colors.white),
+                    ),
+                    const Spacer(),
+                    DecoratedIcon(
+                      backgroundColor: Colors.white54,
+                      child: SvgPicture.asset(
+                        Assets.bookmark,
+                        colorFilter: const ColorFilter.mode(
+                          Colors.white,
+                          BlendMode.srcIn,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              background: const EventBanner(),
             ),
           ),
           SliverFillRemaining(
