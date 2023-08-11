@@ -41,8 +41,10 @@ class _HomeView extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding:
-            AppTheme.of(context).appPaddings.defaultPadding.copyWith(bottom: 0),
+        padding: AppTheme.of(context)
+            .appPaddings
+            .defaultPadding
+            .copyWith(top: 0, bottom: 0),
         child: BlocBuilder<HomeBloc, HomeState>(
           builder: (context, state) => switch (state) {
             HomeLoaded() => EventList(
