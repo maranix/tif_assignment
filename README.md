@@ -1,4 +1,4 @@
-# [APK]()
+# [APK](https://github.com/maranix/tif_assignment/raw/main/app-release.apk)
 
 ## Screenshots
 <p align="center">
@@ -12,6 +12,8 @@
 </p>
 
 ## Demo
+https://github.com/maranix/tif_assignment/assets/59292838/89cb0bd7-fcb3-4a70-9d0e-9698593e7d33
+
 
 ## Tech Stack
 
