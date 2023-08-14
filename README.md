@@ -12,8 +12,7 @@
 </p>
 
 ## Demo
-https://github.com/maranix/tif_assignment/assets/59292838/89cb0bd7-fcb3-4a70-9d0e-9698593e7d33
-
+https://github.com/maranix/tif_assignment/assets/59292838/93f39cc3-f0e1-4985-b959-288286e9e8bb
 
 ## Tech Stack
 
